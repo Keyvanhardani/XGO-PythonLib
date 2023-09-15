@@ -344,8 +344,9 @@ class XGOEDU():
     filename 文件名 字符串
     '''
     def xgoSpeaker(self,filename):
-        path="/home/pi/xgoMusic/"
-        os.system("mplayer"+" "+path+filename)
+        path = "/home/pi/xgoMusic/"
+        cmd = ["mplayer", path + filename]
+        subprocess.run(cmd)
 
     def xgoVideoAudio(self,filename):
         path="/home/pi/xgoVideos/"
